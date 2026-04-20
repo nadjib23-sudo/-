@@ -53,7 +53,7 @@ export default function App() {
       
       // Google Sheets Integration
       // Replace with your Apps Script Web App URL
-      const GOOGLE_SHEET_URL = ''; 
+      const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwju7aEq_V8N-5dqitGWOYWa19zPTCy-WpPqbmCLAikJEWuaSW9uxizDfUyDsV8EGwP5A/exec'; 
 
       const sendToSheet = async () => {
         if (!GOOGLE_SHEET_URL) {
