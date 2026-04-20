@@ -17,7 +17,7 @@ import {
   ArrowRight,
   Star
 } from 'lucide-react';
-
+import productImg from "./product.jpg";
 export default function App() {
   const [formData, setFormData] = useState({
     name: '',
@@ -170,13 +170,12 @@ export default function App() {
               className="relative"
             >
               <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200 border-8 border-white">
-                <img 
-                  import productImg from "./product.jpg";
-
-<img src={productImg} alt="Magnetic Car Phone Holder" />
-                  className="w-full aspect-square object-cover"
-                  referrerPolicy="no-referrer"
-                />
+                <img
+                     src={productImg}
+                     alt="Magnetic Car Phone Holder"
+                      className="w-full aspect-square object-cover"
+                       referrerPolicy="no-referrer"
+                 />
               </div>
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl z-0" />
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl z-0" />
