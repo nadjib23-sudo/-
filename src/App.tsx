@@ -77,11 +77,17 @@ export default function App() {
       };
 
       sendToSheet().finally(() => {
+        // إرسال حدث Lead لفيسبوك بيكسل عند نجاح الطلب
+        if (typeof window !== 'undefined' && (window as any).fbq) {
+          (window as any).fbq('track', 'Lead', {
+            content_name: 'حامل الهاتف المغناطيسي',
+            value: 1200.00,
+            currency: 'DZD'
+          });
+        }
         setIsSubmitting(false);
         setShowSuccess(true);
       });
-    }
-  };
 
   const openWhatsApp = () => {
     const message = `طلب جديد:\nالمنتج: حامل هاتف مغناطيسي ذكي\nالكمية: ${formData.quantity}\nالاسم: ${formData.name}\nالهاتف: ${formData.phone}\nالعنوان: ${formData.address}\nالمدينة: ${formData.city}`;
