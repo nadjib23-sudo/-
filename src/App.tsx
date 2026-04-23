@@ -4,7 +4,7 @@
  */
 
 import { useState, useRef, FormEvent } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { 
   ShoppingBag, 
   CheckCircle2, 
