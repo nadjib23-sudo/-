@@ -77,9 +77,9 @@ export default function App() {
       };
 
       sendToSheet().finally(() => {
-        // إرسال حدث Lead لفيسبوك بيكسل عند نجاح الطلب
+        // إرسال حدث purchase لفيسبوك بيكسل عند نجاح الطلب
         if (typeof window !== 'undefined' && (window as any).fbq) {
-          (window as any).fbq('track', 'Lead', {
+          (window as any).fbq('track', 'purchase', {
             content_name: 'حامل الهاتف المغناطيسي',
             value: 1200.00,
             currency: 'DZD'
