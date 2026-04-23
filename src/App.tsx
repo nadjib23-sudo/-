@@ -88,6 +88,8 @@ export default function App() {
         setIsSubmitting(false);
         setShowSuccess(true);
       });
+    }
+  };
 
   const openWhatsApp = () => {
     const message = `طلب جديد:\nالمنتج: حامل هاتف مغناطيسي ذكي\nالكمية: ${formData.quantity}\nالاسم: ${formData.name}\nالهاتف: ${formData.phone}\nالعنوان: ${formData.address}\nالمدينة: ${formData.city}`;
